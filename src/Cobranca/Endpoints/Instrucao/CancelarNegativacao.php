@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ailos\Sdk\Cobranca\Endpoints\Instrucao;
 
-use use Ailos\Sdk\Cobranca\Endpoints\Endpoint;
+use Ailos\Sdk\Cobranca\Endpoints\Endpoint;
 use Ailos\Sdk\Http\Request;
 
 /**
