@@ -9,7 +9,7 @@ use Ailos\Sdk\Cobranca\Auth\Auth;
 use Ailos\Sdk\Cobranca\Auth\Jwt;
 use Ailos\Sdk\Tests\CobrancaTestCase;
 
-class AuthManagerTest extends CobrancaTestCase
+class AuthTest extends CobrancaTestCase
 {
     protected function setUp(): void
     {
@@ -95,7 +95,7 @@ class AuthManagerTest extends CobrancaTestCase
         $this->assertNotNull($originalJwt);
 
         $expiredJwt = new Jwt($originalJwt->state, $originalJwt->code, 0);
-        parent::$context->config->storage->set('jwt', $expiredJwt, 3600);
+        parent::$context->storage->set('jwt', $expiredJwt, 3600);
 
         $authManager->auth();
 

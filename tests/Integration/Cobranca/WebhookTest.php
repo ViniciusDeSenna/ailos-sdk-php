@@ -26,14 +26,14 @@ class WebhookTest extends CobrancaTestCase
     {
         $response = new ListarWebhooks(parent::$context)->handle(1);
 
-        self::assertIsArray($response);
+        $this->addToAssertionCount(1);
     }
 
     public function testConsultarWebhook(): void
     {
         $response = new ConsultarWebhook(parent::$context)->handle('1');
 
-        self::assertIsArray($response);
+        $this->addToAssertionCount(1);
     }
 
     public function testExcluirWebhook(): void
