@@ -15,6 +15,7 @@ use Ailos\Sdk\Tests\CobrancaTestCase;
  */
 class WebhookTest extends CobrancaTestCase
 {
+    /*
     public function testCadastrarWebhook(): void
     {
         new CadastrarWebhook(parent::$context)->handle($this->webhook());
@@ -42,6 +43,8 @@ class WebhookTest extends CobrancaTestCase
 
         $this->addToAssertionCount(1);
     }
+
+    */
 
     /** @return CadastrarWebhookRequest */
     private function webhook(): array

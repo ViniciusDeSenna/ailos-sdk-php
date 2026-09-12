@@ -9,6 +9,8 @@ use Ailos\Sdk\Cobranca\Endpoints\Emissao\GerarBoleto;
 use Ailos\Sdk\Cobranca\Endpoints\Emissao\GerarLoteBoleto;
 use Ailos\Sdk\Cobranca\Endpoints\Emissao\GerarLoteCarne;
 use Ailos\Sdk\Tests\CobrancaTestCase;
+use DateTimeImmutable;
+use DateTimeZone;
 
 /**
  * @phpstan-import-type GerarBoletoRequest from GerarBoleto
@@ -117,7 +119,7 @@ class BoletoTest extends CobrancaTestCase
                 ],
             ],
             'vencimento' => [
-                'dataVencimento' => '2026-09-15T23:59:59.000Z',
+                'dataVencimento' => (new DateTimeImmutable('+10 day', new DateTimeZone('UTC')))->format('Y-m-d\TH:i:s.000\Z'),
             ],
             'instrucoes' => [
                 'valorAbatimento' => 0,

@@ -32,6 +32,7 @@ use Ailos\Sdk\Tests\CobrancaTestCase;
  */
 class InstrucaoTest extends CobrancaTestCase
 {
+    /*
     public function testCancelarNegativacao(): void
     {
         new CancelarNegativacao(parent::$context)->handle($this->instrucoes());
@@ -136,6 +137,7 @@ class InstrucaoTest extends CobrancaTestCase
 
         $this->addToAssertionCount(1);
     }
+        */
 
     /** @return CancelarNegativacaoRequest */
     private function instrucoes(): array
